@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-NTLMv2 pass-the-hash MITM proxy.
+NTLMv2 pass-the-hash proxy.
 
 Listens on a local port, terminates TLS for CONNECT tunnels (using an
 ephemeral CA), and forwards every request to the real target using
