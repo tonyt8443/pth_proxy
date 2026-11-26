@@ -3,12 +3,12 @@
 Pass the Hash NTLM HTTP Proxy (pth_proxy.py) to authenticate to Web Application
 
 - Use where password is not available but NT hash is available
-- PTH proxy (pth_proxy.py) intercepts HTTP requests and uses the provided NT hash to inject the NTLM authentication headers to the target web application
+- PTH proxy (pth_proxy.py) intercepts HTTP requests and uses the provided NT hash to inject the NetNTLMv2 authentication headers to the target web application
 
 
 ### How it works
 
-pth_proxy allows authentication to web application using a NT hash
+pth_proxy allows authentication to web application using the provided NT hash
 
 - Listens on 127.0.0.1:3128 (or whatever you pass)
 - CONNECT host:443 → replies 200 Connection established, then TLS-terminates using a leaf cert signed by an ephemeral CA it just generated.
